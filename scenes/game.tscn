@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://lkqiedbgvbww"]
+
+[ext_resource type="Script" path="res://scripts/area/mine_generator.gd" id="1_5282w"]
+[ext_resource type="Texture2D" uid="uid://d1le5b1tn4ges" path="res://icon.svg" id="1_fekbn"]
+[ext_resource type="Script" path="res://scripts/control/char.gd" id="3_r7gow"]
+
+[node name="Game" type="Node"]
+
+[node name="Mine" type="Node2D" parent="."]
+position = Vector2(64, 128)
+script = ExtResource("1_5282w")
+
+[node name="Char" type="Sprite2D" parent="Mine"]
+position = Vector2(256, -128)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_fekbn")
+offset = Vector2(64, 64)
+script = ExtResource("3_r7gow")
+
+[node name="Blocks" type="Node2D" parent="Mine"]

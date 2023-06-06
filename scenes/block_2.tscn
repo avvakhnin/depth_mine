@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c53ee6rgqxmp2"]
+
+[ext_resource type="Shader" path="res://resources/shaders/block.gdshader" id="1_qfdtq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2urpy"]
+shader = ExtResource("1_qfdtq")
+shader_parameter/block_color = Color(0.141176, 0.227451, 0.454902, 1)
+
+[node name="Block" type="Polygon2D"]
+material = SubResource("ShaderMaterial_2urpy")
+polygon = PackedVector2Array(0, 0, 64, 2.08165e-12, 64, 64, 2.08165e-12, 64, 0, 0)
