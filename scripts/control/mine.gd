@@ -26,5 +26,5 @@ func clear_blocks():
 		$Blocks.remove_child(n)
 		n.queue_free()
 
-func can_move(pisition:Vector2i)->bool:
-	return generator.can_move(pisition)
+func can_move(position:Vector2i)->bool:
+	return generator.can_move(position)
