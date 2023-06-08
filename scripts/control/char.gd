@@ -30,7 +30,7 @@ func _choose_direction() -> Vector2i:
 	if side_direction != Vector2i.ZERO:
 		if (!parent.can_move(position_i + side_direction) )&& \
 			(parent.can_move(position_i  + Vector2i.DOWN ) \
-			|| !parent.can_move(position_i + side_direction + Vector2i.DOWN ) ):
+			|| parent.can_move(position_i + side_direction + Vector2i.DOWN ) ):
 			return side_direction
 		
 	var botton_tile = mine_utils.get_tile(position) + Vector2i.DOWN
